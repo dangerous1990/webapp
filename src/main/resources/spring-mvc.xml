@@ -18,6 +18,11 @@
 				class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter" />
 			<bean
 				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/plain;charset=UTF-8</value>
+					</list>
+				</property>
 				<property name="objectMapper">
 					<bean class="com.fasterxml.jackson.databind.ObjectMapper">
 						<property name="dateFormat">
@@ -27,17 +32,9 @@
 						</property>
 					</bean>
 				</property>
-				<property name="supportedMediaTypes">
-					<list>
-						<value>text/plain;charset=UTF-8</value>
-					</list>
-				</property>
 			</bean>
 		</mvc:message-converters>
 	</mvc:annotation-driven>
-	<!-- 启动Spring MVC的注解功能，完成请求和注解POJO的映射 -->
-	<bean
-		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
 	<!-- jsp默认跳转配置 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"

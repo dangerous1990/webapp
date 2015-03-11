@@ -9,7 +9,7 @@
 <title>hello</title>
 </head>
 <body>
-	<form action="${ctx}/login/login" method="get">
+	<form action="${ctx}/login/login"  method="post" enctype="application/json">
 
 		用户名<input name="name" type="text" /> <br> 密码 <input
 			name="password" type="text" /> <br> <input type="submit">
