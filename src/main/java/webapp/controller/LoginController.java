@@ -19,8 +19,8 @@ import webapp.model.User;
 @RequestMapping("/login")
 public class LoginController {
 	@RequestMapping(value="/login",method=RequestMethod.POST)
-	public String login(HttpServletRequest req,HttpServletResponse rsp){
-		System.out.println(req.getParameter("name"));
+	public String login(@RequestBody User user){
+		System.out.println(user);
 		return "main";
 	}
 
