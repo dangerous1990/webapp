@@ -8,21 +8,21 @@
     <title>
       hello
     </title>
-    <script type="text/javascript"	src="${ctx}/js/jquery-1.11.2.js">
+    <script type="text/javascript"  src="${ctx} /js/jquery-1.11.2.js">
     </script>
     <script type="text/javascript">
       $(document).ready(function(){
-
+		alert('33');
         });
       </script>
     </head>
     <body>
-      <form id="login"action="${ctx}/login/login"	method="post" enctype="application/json">
+      <form id="login" action="${ctx}/j_spring_security_check"  method="post" >
         用户名
-        <input name="name" type="text" />
+        <input name="j_username" type="text" />
         <br>
         密码
-        <input name="password" type="text" />
+        <input name="j_password" type="text" />
         <br>
         <input type="submit">
 
