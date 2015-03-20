@@ -5,12 +5,12 @@
 
 	<global-method-security pre-post-annotations="enabled" />
 
-	<http pattern="/css/*" security="none" />
-	<http pattern="/js/*" security="none" />
-	<http pattern="/login.html" security="none" />
-	<http pattern="/index.jsp" security="none" />
+	<http pattern="/css/**" security="none" />
+	<http pattern="/js/**" security="none" />
+	<http pattern="/login.jsp" security="none" />
 
 	<http use-expressions="true">
+		<intercept-url pattern="/**" access="isAuthenticated()" />
 		<form-login login-page="/login.jsp" always-use-default-target="true" default-target-url="/login/login" authentication-failure-url="/login.jsp" />
 		<logout invalidate-session="true" logout-success-url="/views/main.jsp" />
 		<session-management invalid-session-url="/index.jsp" session-authentication-error-url="/index.jsp">
