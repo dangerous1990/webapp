@@ -20,5 +20,6 @@ jQuery.extend(jQuery.validator.messages, {
 	ipv4:"请输入正确的ip地址",
 	isPhone:"请输入正确的电话号码",
 	nonChinese:"您所输入的内容不能包含汉字",
-	chineseOnly:"您所输入的内容只能包含汉字"		
+	chineseOnly:"您所输入的内容只能包含汉字"	,
+	vinUS:"您所输入的内容只能包含汉字"
 });
