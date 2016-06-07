@@ -29,7 +29,7 @@ public class LoginControllerTest extends BaseControllerTest {
 	}
 
 	@Test
-	public void addTemplate() throws Exception {
+	public void login() throws Exception {
 		this.mockMvc.perform(get("/login/login", "").characterEncoding("UTF-8")
 				.contentType(MediaType.APPLICATION_FORM_URLENCODED).param("name", "admin").param("password", "456"))
 				.andDo(print());
