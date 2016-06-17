@@ -15,6 +15,7 @@
 	<mvc:resources location="/" mapping="/**/*.js" />
 	<mvc:resources location="/" mapping="/**/*.css" />
 	<mvc:resources location="/" mapping="/**/*.png" />
+	<mvc:resources mapping="/swagger/**" location="/swagger/"/>
 
 	<context:annotation-config />
 	<context:component-scan base-package="webapp.controller" />
@@ -50,6 +51,7 @@
 			</bean>
 		</mvc:message-converters>
 	</mvc:annotation-driven>
+	<bean class="com.mangofactory.swagger.configuration.SpringSwaggerConfig" />
 	<!-- jsp默认跳转配置 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"

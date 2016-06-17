@@ -7,6 +7,10 @@
 
 	<http pattern="/css/**" security="none" />
 	<http pattern="/js/**" security="none" />
+	<http pattern="/swagger/**" security="none" />
+	<http pattern="/api-docs/**" security="none" />
+	<http pattern="/api-docs" security="none" />
+	
 	<http pattern="/login.jsp" security="none" />
 
 	<http use-expressions="true">
