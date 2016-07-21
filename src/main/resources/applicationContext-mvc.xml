@@ -15,16 +15,17 @@
 	<mvc:resources location="/" mapping="/**/*.js" />
 	<mvc:resources location="/" mapping="/**/*.css" />
 	<mvc:resources location="/" mapping="/**/*.png" />
-	<mvc:resources mapping="/swagger/**" location="/swagger/"/>
+	<mvc:resources mapping="/swagger/**" location="/swagger/" />
 
 	<context:annotation-config />
 	<context:component-scan base-package="webapp.controller" />
 	<context:component-scan base-package="webapp.aop" />
+	<bean class="webapp.swagger.SpringConfig" />
+
 	<!-- aop注解自动扫描 -->
 	<aop:aspectj-autoproxy />
 	<!-- 加载配置文件 -->
-	<context:property-placeholder location="classpath:config.properties"
-		ignore-resource-not-found="true" />
+	<import resource="applicationContext-property.xml"/>
 	<!-- MVC配置 -->
 	<!-- mvc注解启用，自动转换实体 -->
 	<mvc:annotation-driven>
@@ -51,7 +52,6 @@
 			</bean>
 		</mvc:message-converters>
 	</mvc:annotation-driven>
-	<bean class="com.mangofactory.swagger.configuration.SpringSwaggerConfig" />
 	<!-- jsp默认跳转配置 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"

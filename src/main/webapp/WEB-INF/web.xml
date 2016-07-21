@@ -18,15 +18,7 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	<!-- Spring Security 委派 Filter Chain -->
-	<filter>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+
 	<!-- 兼容风格 -->
 	<filter>
 		<filter-name>httpMethodFilter param</filter-name>
@@ -69,8 +61,8 @@
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>
-      classpath:applicationContext-mvc.xml
-      classpath:applicationContext-security.xml
+      classpath:applicationContext-redis.xml
+      classpath:applicationContext-property.xml
     </param-value>
   </context-param>
   <listener>
