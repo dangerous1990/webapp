@@ -27,6 +27,15 @@
 	<!-- 加载配置文件 -->
 	<import resource="applicationContext-property.xml"/>
 	<!-- MVC配置 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="webapp.filter.CORSInterceptor">
+				<property name="origins" value="123456">
+				</property>
+			</bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 	<!-- mvc注解启用，自动转换实体 -->
 	<mvc:annotation-driven>
 		<mvc:message-converters>

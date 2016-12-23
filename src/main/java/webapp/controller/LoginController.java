@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.ResponseBody;
 import webapp.model.User;
 
 /**
@@ -19,11 +20,12 @@ import webapp.model.User;
 @RequestMapping("/login")
 @Api("user")
 public class LoginController {
-    @RequestMapping(value = "/login", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/login")
     @ApiOperation(value = "登录", response = User.class, notes = "登录")
-    public String login(@RequestBody User user) {
+    @ResponseBody
+    public User login(User user) {
 
-        return "main";
+        return user;
     }
 
 }
