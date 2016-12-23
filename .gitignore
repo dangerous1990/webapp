@@ -6,5 +6,5 @@
 *.iml
 .idea/**
 *.classpath
-.setting/**
-.setting
+.settings/**
+.settings
