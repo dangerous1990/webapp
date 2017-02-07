@@ -158,6 +158,11 @@
 			<artifactId>spring-data-redis</artifactId>
 			<version>1.7.1.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.9</version>
+		</dependency>
 	</dependencies>
 
 	<profiles>
